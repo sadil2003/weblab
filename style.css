@@ -1,0 +1,46 @@
+body {
+    font-family: Arial, Helvetica, sans-serif;
+}
+
+.green {
+    background-color: darkgreen;
+}
+
+h2 {
+    text-align: center;
+}
+
+div.mainform {
+    background-color: white;
+    justify-items: center;
+    margin: auto;
+    display: grid;
+    border-style: solid;
+    border-width: 2px;
+    border-radius: 10px;
+    max-width: 400px;
+    padding-bottom: 5px;
+
+}
+
+input {
+    width: 350px;
+    margin-top: 8px;
+    margin-bottom: 8px;
+    padding: 7px;
+
+}
+
+select {
+    width: 350px;
+    margin-top: 8px;
+    margin-bottom: 8px;
+    padding: 7px;
+}
+
+.submit {
+    color: white;
+    border-radius: 5px;
+    padding: 10px;
+    border-width: inherit;
+}
