@@ -1,0 +1,28 @@
+<html>
+    <head>
+        <title>Question 01</title>
+    </head>
+    <body>
+        <script>
+            var sm_price = 300, sm_units = 50,
+                tab_price = 200, tab_units = 30,
+                sm_sell = 550, tab_sell = 400;
+
+            var sm_expense = sm_price * sm_units,
+                tab_expense = tab_price * tab_units;
+                total_expense = sm_expense + tab_expense;
+
+            var sm_income = (sm_sell * 90/100) * sm_units,
+                tab_income = (tab_sell * 95/100) * tab_units,
+                total_income = (sm_income + tab_income);
+
+            var total_profit = total_income - total_expense;
+
+window.alert(`Total expense: $${total_expense} 
+Total income form sales: $${total_income} 
+Total profit: $${total_profit}
+`)
+        </script>
+    
+    </body>
+</html>
