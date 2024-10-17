@@ -1,0 +1,24 @@
+<!--
+    Question 02:
+    Write a JavaScript code that prompts the user to enter their name and home town. Display the name and home town on the web page.
+-->
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <title>Question 01</title>
+    </head>
+    <body>
+
+        <p>Name: <span id="name"></span></p>
+        <p>Home Town: <span id="town"></span></p>
+        <script>
+            var name = prompt("Enter your name");
+            var town = prompt("Enter your home town");
+
+            document.getElementById("name").textContent = name;
+            document.getElementById("town").textContent = town;
+        </script>
+    </body>
+</html>

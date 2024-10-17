@@ -1,0 +1,30 @@
+<!--
+    Question 03
+    Write a JavaScript program to calculate the total revenue from the sales of t-shirts and jeans. A jean is sold at $300 and a t-shirt is sold at $200. 30 t-shirts and 20 jeans have been sold. Display the total items sold and the total revenue gained by the sales.
+-->
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <title>Question 03</title>
+    </head>
+    <body>
+        <script>
+            var tshirt_price = 200, jeans_price = 300;
+            var tshirt_qty = 30, jeans_qty = 20;
+            var total_qty = tshirt_qty + jeans_qty;
+
+            var tshirt_rv = tshirt_price * tshirt_qty;
+            var jeans_rv = jeans_price * jeans_qty;
+            var total_rv = tshirt_rv + jeans_rv;
+
+            alert(`
+Total Items sold: ${total_qty}
+Total revenue from tshirts sold: ${tshirt_rv}
+Total revenue from jeans sold: ${jeans_rv}
+Total revenue from both tshirts and jeans sold: ${total_rv}
+                `)
+        </script>
+    </body>
+</html>

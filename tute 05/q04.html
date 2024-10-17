@@ -1,0 +1,34 @@
+<!--
+    Question 04:
+    Write a JavaScript program to calculate the total revenue from the sales of bats and balls. A bat is sold at $300 and a ball is sold at $200. 40 bats and 60 balls have been sold. If a customer buys more than 20 bats or balls, they are eligible for a discount. Display the total items sold and the total revenue gained by the sales.
+-->
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <title>Question 04</title>
+    </head>
+    <body>
+        <script>
+            var bat_price = 300, ball_price = 200;
+            var bat_qty = 40, balls_qty = 60;
+            var total_qty = bat_qty + balls_qty;
+
+            var bat_rv = bat_price * bat_qty;
+            var ball_rv = ball_price * balls_qty;
+            var total_rv = bat_rv + ball_rv;
+
+            if (balls_qty > 20 || bat_qty > 20) {
+                document.write("Congratulations! you are eligible for a discount<br>");
+            }
+
+            document.write(`
+                Total Items sold: ${total_qty}<br>
+                Total revenue from bats sold: ${bat_rv}<br>
+                Total revenue from balls sold: ${ball_rv}<br>
+                Total revenue from both bats and balls sold: ${total_rv}<br>
+                `)
+        </script>
+    </body>
+</html>
