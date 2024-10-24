@@ -1,0 +1,34 @@
+<html>
+<head>
+    <title>Patient Information</title>
+    <script src="script.js"></script>
+</head>
+<body>
+    <form name="form1">
+       <fieldset style="width: 450px;">
+         <legend>Patient Information</legend>
+            Name: <input type="text" name="uname"><br><br>
+            Address: <input style="height:50px;" type="text" name="address"><br><br>
+            Birth Date: <input type="date" name="Bday" placeholder="dd/mm/yyyy"><br><br>
+            Age: <input type="text" name="age" ><br><br>
+            Gender: <input type="radio" name="g" value="0"> MALE
+            <input type="radio" name="g" value="1"> FEMALE<br><br>
+
+            Disease:
+            <select name="disease">
+                <option value="0">select</option> 
+                <option value="Amyloidosis">Amyloidosis</option>
+                <option value="Covid-19">Covid-19</option>
+                <option value="Dengue">Dengue</option>
+            </select><br><br>
+
+            E-mail: <input type="text" name="mail"><br><br>
+            PIN: <input type="password" id="pin" required><br><br>
+
+            <input type="button" value="Submit" onclick="validateform()">
+        </fieldset> 
+    </form>
+
+    <div id="output" style="margin-top: 20px;"></div>
+</body>
+</html>
