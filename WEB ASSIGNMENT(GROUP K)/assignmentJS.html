@@ -1,0 +1,104 @@
+<html>
+<head>
+    <title>Patient Information</title>
+    <script>
+        function validateform() {
+            var name = document.form1.uname.value;
+            var address = document.form1.address.value;
+            var birthDate = document.form1.Bday.value;
+            var age = document.form1.age.value;
+            var gender = document.form1.g.value;
+            var disease = document.form1.disease.value;
+            var email = document.form1.mail.value;
+            var password = document.form1.pin.value
+            
+            if (name.length == 0) {
+                window.alert("Name is Missing");
+                return false;
+            }
+            if (address.length == 0) {
+                window.alert("Address is Missing");
+                return false;
+            }
+            if (birthDate.length == 0) {
+                window.alert("Birth Date is Required");
+                return false;
+            }
+            if (isNaN(age)|| age.length === 0) {
+                window.alert("Input a numerical value for age");
+                return false;
+            }
+            if (age.length > 3) {
+                window.alert("Age should be less than 3 numerical places");
+                return false;
+            }
+            if (!gender) {
+                window.alert("Choose male or female");
+                return false;
+            }
+            if (disease == "0") {
+                window.alert("Please select a valid disease");
+                return false;
+            }
+            if (email.length == 0) {
+                window.alert("Email is missing");
+                return false;
+            }
+            if (email.indexOf('@') === -1) {
+                window.alert("Email must contain an '@' symbol");
+                return false;
+            }
+           
+            if (password.length == 0) {
+                window.alert("password is Required");
+                return false;
+            }
+
+            if (password.length < 6) {
+                window.alert("password should be greater than 6 characters");
+                return false;
+            }
+          
+                
+                document.getElementById("output").innerHTML =
+                "<strong>Name:</strong> " + name + "<br>"+
+                "<strong>Address:</strong> " + address + "<br>"+
+                "<strong>Birth Date:</strong> " + birthDate + "<br>"+
+                "<strong>Age:</strong> " + age + "<br>" +
+                "<strong>Gender:</strong> " + (gender === '0' ? 'Male' : 'Female') + "<br>"+
+                "<strong>Disease:</strong> " + disease + "<br>"+
+                "<strong>Email:</strong> " + email;
+
+            return true; 
+        }
+    </script>
+</head>
+<body>
+    <form name="form1">
+       <fieldset style="width: 450px;">
+         <legend>Patient Information</legend>
+            Name: <input type="text" name="uname"><br><br>
+            Address: <input style="height:50px;" type="text" name="address"><br><br>
+            Birth Date: <input type="date" name="Bday" placeholder="dd/mm/yyyy"><br><br>
+            Age: <input type="text" name="age" ><br><br>
+            Gender: <input type="radio" name="g" value="0"> MALE
+            <input type="radio" name="g" value="1"> FEMALE<br><br>
+
+            Disease:
+            <select name="disease">
+                <option value="0">select</option> 
+                <option value="Amyloidosis">Amyloidosis</option>
+                <option value="Covid-19">Covid-19</option>
+                <option value="Dengue">Dengue</option>
+            </select><br><br>
+
+            E-mail: <input type="text" name="mail"><br><br>
+            PIN: <input type="password" id="pin" required><br><br>
+
+            <input type="button" value="Submit" onclick="validateform()">
+        </fieldset> 
+    </form>
+
+    <div id="output" style="margin-top: 20px;"></div>
+</body>
+</html>
